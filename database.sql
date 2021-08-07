@@ -53,13 +53,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `codigo` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `full_name` varchar(300) NOT NULL,
-  `password` varchar(30) NOT NULL,
+  `password` varchar(60) NOT NULL,
   `role` int(1) NOT NULL,
   PRIMARY KEY (`codigo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela moat.users: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela moat.users: ~1 rows (aproximadamente)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`codigo`, `username`, `full_name`, `password`, `role`) VALUES
+	(1, 'admin', 'owner', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc', 1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
