@@ -10910,7 +10910,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Mostrando _START_ para _END_ de _TOTAL_ registros",
+			"sInfo": "Showing _START_ to _END_ from _TOTAL_ records",
 	
 	
 			/**

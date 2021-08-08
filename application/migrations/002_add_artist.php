@@ -12,18 +12,11 @@ class Migration_Add_artist extends CI_Migration
                  'unsigned' => true,
                  'auto_increment' => true
               ),
-			  'artist_id' => array(
-                 'type' => 'INT',
-                 'constraint' => '11',
-              ),			 
               'name' => array(
                  'type' => 'VARCHAR',
                  'constraint' => '300',
               ),
-			   'year' => array(
-                 'type' => 'INT',
-                 'constraint' => '4',
-              ),
+			  
            )
         );
 

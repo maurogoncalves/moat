@@ -1,0 +1,112 @@
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-1 sidenav">    </div>
+    <div class="col-sm-10 text-left"> 
+		<div class="col-sm-12 text-left"> 
+		<BR>
+		</div>		
+		<div class="col-sm-12 text-left"> 
+		<BR>
+		</div>
+		
+
+		<div class="col-sm-12 text-center"> 
+			  <div class="col-sm-12">
+				<h2>Register</h2>
+			  </div>
+		</div>
+		<div class="col-sm-12 text-left"> 
+		<BR>
+		</div>
+		<?php
+			  $attributes = array('class' => 'm-t');
+			  echo form_open('Add', $attributes); 
+			  ?>
+			  
+		<div class="col-sm-12 text-center "> 
+			
+			  <div class="col-sm-2" style='font-weight:bold!important'>
+				Username
+			  </div>
+			  <div class="col-sm-2" style='font-weight:bold!important'>
+				Password
+			  </div>
+			    <div class="col-sm-6" style='font-weight:bold!important'>
+				Full Name
+			  </div>
+			  <div class="col-sm-2" style='font-weight:bold!important'>
+				Role
+			  </div>
+			  
+		</div>	
+		
+		 <div class="col-sm-12 text-left"> 
+			
+			  <div class="col-sm-2">
+				<input type="text" class="form-control"  placeholder='Username' name="username" required>
+			  </div>
+			  <div class="col-sm-2">
+				<input type="password" class="form-control"  placeholder='Password' name="password" required>
+			  </div>
+			    <div class="col-sm-6">
+				<input type="text" class="form-control"  placeholder='Full Name' name="fullname" required>
+			  </div>
+			  <div class="col-sm-2">
+				<select class="form-control" name='role' required>  
+					  <option value="">Choose</option>	
+					  <option value="1">Admin</option>	
+					  <option value="2">User</option>	
+				</select>
+			  </div>
+			  
+		</div>		
+		<div class="col-sm-12 text-left"> 
+		<BR>
+		</div>
+		<div class="col-sm-12 text-left"> 
+			<div class="col-sm-4">
+			</div>
+			  <div class="col-sm-4">
+				<button type="submit" id='registrar' style='background-color:#FF0000!important;color:#fff!important;font-size:18px!important;font-weight:bold' class="btn btn-default form-control">
+					Add
+				</button>
+			  </div>
+			  <div class="col-sm-4">
+			</div>
+		</div>
+		<div class="col-sm-12 text-left"> 
+		<BR>
+		</div>
+		
+		<div class="col-sm-12 text-left"> 
+			<div class="col-sm-3">
+			</div>
+			  <div class="col-sm-6" style='text-align:center;color:#FF0000!important;font-size:14px!important;font-weight:bold'>
+				<?php if($this->session->flashdata('mensagem')) {
+					echo $message = $this->session->flashdata('mensagem');
+				}
+				?>
+			  </div>
+			  <div class="col-sm-3">
+			</div>
+		</div>
+
+		</form>
+		<div class="col-sm-12 text-left"> 
+		<BR><br>
+		</div>
+				<div class="col-sm-12 text-left"> 
+		<div class="col-sm-4">
+			</div>
+			  <div class="col-sm-4 text-center">
+				<a class="submenu" style='font-weight:bold!important' href="<?php echo $this->config->base_url(); ?>index.php/Login"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Log in your account </span></a>
+			  </div>
+			  <div class="col-sm-4">
+			</div>
+		</div>
+  </div>
+  <div class="col-sm-1 sidenav">   </div>
+ 
+</div>
+
+  
