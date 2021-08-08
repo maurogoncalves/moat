@@ -19,30 +19,6 @@ class Task extends REST_Controller
            
            $this->response($r); 
        }
-       public function artist_put(){
-           $id = $this->uri->segment(3);
-
-           $data = array('name' => $this->input->get('name'),
-           'pass' => $this->input->get('pass'),
-           'type' => $this->input->get('type')
-           );
-
-            $r = $this->Artist_model->update($id,$data);
-               $this->response($r); 
-       }
-
-       public function artist_put_post(){
-           $data = array('name' => $this->input->post('name'),
-           'pass' => $this->input->post('pass'),
-           'type' => $this->input->post('type')
-           );
-           $r = $this->Artist_model->insert($data);
-           $this->response($r); 
-       }
-       public function artist_put_delete(){
-           $id = $this->uri->segment(3);
-           $r = $this->Artist_model->delete($id);
-           $this->response($r); 
-       }
+       
 }	   
 	   
