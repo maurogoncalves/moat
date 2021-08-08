@@ -42,6 +42,11 @@ Class Artist_model extends CI_Model{
 	return true;
 
  }
+ 
+function read(){
+   $query = $this->db->query("select * from `artist`");
+   return $query->result_array();
+}
  	
 	
 }
