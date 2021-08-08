@@ -63,7 +63,7 @@
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
-								<li><a  href="<?php echo $this->config->base_url(); ?>index.php/Logout"><i class="halflings-icon off"></i> Sair</a></li>
+								<li><a  href="<?php echo $this->config->base_url(); ?>index.php/Admin/Logout"><i class="halflings-icon off"></i> Logout</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->

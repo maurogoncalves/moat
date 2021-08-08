@@ -8,7 +8,7 @@
 					<div class="box-content">
 					<form class="form-horizontal" action="<?php echo $this->config->base_url(); ?>index.php/Admin/addChangeArtist"" method="post"  enctype="multipart/form-data" >
 						  <fieldset>
-						  <legend>Edit</legend>
+						  <legend>Add</legend>
 														
 													  
 							<div class="control-group">
