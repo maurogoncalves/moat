@@ -21,7 +21,7 @@ class Admin extends CI_Controller {
 
 	$dataHeader['usuario'] = $session_data['username'];
 
-	$dataHeader['usuario'] = $session_data['username'];
+
 	$dataHeader['mensagemInicial'] = 'Admin';
 	$this->load->view('header_view_adm',$dataHeader);	
 	$this->load->view('admin_view');
@@ -191,7 +191,7 @@ class Admin extends CI_Controller {
 	}else{
 		if($session_data['role'] == 1){
 			$this->Artist_model->excluir($id);				
-			$this->session->set_flashdata('messagemSenha', "This artist doesn't exist");
+			$this->session->set_flashdata('messagemSenha', "This artist was deleted");
 		}else{
 			$this->session->set_flashdata('messagemSenha', "You can't delete an artist");
 		}

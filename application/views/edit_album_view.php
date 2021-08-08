@@ -31,12 +31,12 @@
 								<select class="form-control" name='codigo' required>  
 								  <option value="" selected >Choose</option>	
 									<?php foreach($artist as $key => $art){ 
-										if($usuario[0]->id_artist == $art->codigo){
+										if($usuario[0]->id_artist == $art->id){
 									?>
-										<option value="<?php echo $art->codigo ?>" selected><?php echo $art->name?></option>											
+										<option value="<?php echo $art->id ?>" selected><?php echo $art->name?></option>											
 									<?php
 										}else{ ?>
-											<option value="<?php echo $art->codigo ?>" ><?php echo $art->name?></option>											
+											<option value="<?php echo $art->id ?>" ><?php echo $art->name?></option>											
 									<?php 	}
 									}
 									?>			
@@ -49,7 +49,7 @@
 							
 							<div class="form-actions">
 								<input type="hidden" id="op"  name="op"  value='1'>
-								<input type="hidden" id="codigoAlbum"  name="codigoAlbum"  value='<?php echo $usuario[0]->codigo?>'>
+								<input type="hidden" id="codigoAlbum"  name="codigoAlbum"  value='<?php echo $usuario[0]->id?>'>
 							  <button type="submit" class="btn btn-primary" >Add</button>
 							</div>
 						  </fieldset>

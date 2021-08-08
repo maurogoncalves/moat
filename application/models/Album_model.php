@@ -13,10 +13,10 @@ Class Album_model extends CI_Model{
  
  function list($id){	
     if($id == 0){
-		$sql = "select a.codigo,a.name,a.year,art.name as artist,art.codigo as id_artist from album a  join artist art on a.artist_id = art.codigo";
+		$sql = "select a.id,a.name,a.year,art.name as artist,art.id as id_artist from album a  join artist art on a.artist_id = art.id";
 		$query = $this->db->query($sql, array());
 	}else{
-		$sql = "select a.codigo,a.name,a.year,art.name as artist,art.codigo as id_artist from album a  join artist art on a.artist_id = art.codigo where a.codigo = ?";
+		$sql = "select a.id,a.name,a.year,art.name as artist,art.id as id_artist from album a  join artist art on a.artist_id = art.id where a.id = ?";
 		$query = $this->db->query($sql, array($id));
 	}
     
@@ -27,7 +27,7 @@ Class Album_model extends CI_Model{
  
   function excluir($id){
 
-	$this->db->where('codigo', $id);
+	$this->db->where('id', $id);
 	$this->db->delete('album'); 
 	//print_r($this->db->last_query());exit;
 	return true;
@@ -36,7 +36,7 @@ Class Album_model extends CI_Model{
 		
  function atualizar($dados,$id){
 
-	$this->db->where('codigo', $id);
+	$this->db->where('id', $id);
 	$this->db->update('album', $dados); 
 	//print_r($this->db->last_query());exit;
 	return true;

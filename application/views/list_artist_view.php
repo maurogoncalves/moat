@@ -29,10 +29,10 @@
 								 <tr>
 								 <td ><?php echo $evento->name; ?> </td>
 								 <td >
-								 <a  href="<?php echo $this->config->base_url(); ?>Admin/editArtist?id=<?php echo $evento->codigo;?>"><i class="halflings-icon pencil" style='height:20px'  title='Edit' alt='Edit'></i></a>
+								 <a  href="<?php echo $this->config->base_url(); ?>Admin/editArtist?id=<?php echo $evento->id;?>"><i class="halflings-icon pencil" style='height:20px'  title='Edit' alt='Edit'></i></a>
 								 &nbsp;
 								 <?php  if($role == 1){ ?>
-									 <a  href="<?php echo $this->config->base_url(); ?>Admin/delArtist?id=<?php echo $evento->codigo;?>"><i class="halflings-icon remove" style='height:20px'  title='Delete' alt='Delete'></i></a>
+									 <a  href="<?php echo $this->config->base_url(); ?>Admin/delArtist?id=<?php echo $evento->id;?>"><i class="halflings-icon remove" style='height:20px'  title='Delete' alt='Delete'></i></a>
 								 <?php } ?>
 									 
 								 

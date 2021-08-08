@@ -31,7 +31,7 @@
 								<select class="form-control" name='codigo' required>  
 								  <option value="" selected >Choose</option>	
 									<?php foreach($artist as $key => $art){ ?>
-										<option value="<?php echo $art->codigo ?>" ><?php echo $art->name?></option>											
+										<option value="<?php echo $art->id ?>" ><?php echo $art->name?></option>											
 									<?php
 									}
 									?>			

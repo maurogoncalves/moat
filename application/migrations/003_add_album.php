@@ -6,7 +6,7 @@ class Migration_Add_album extends CI_Migration
 
         $this->dbforge->add_field(
            array(
-              'codigo' => array(
+              'id' => array(
                  'type' => 'INT',
                  'constraint' => 11,
                  'unsigned' => true,
@@ -27,7 +27,7 @@ class Migration_Add_album extends CI_Migration
            )
         );
 
-        $this->dbforge->add_key('codigo', TRUE);
+        $this->dbforge->add_key('id', TRUE);
         $this->dbforge->create_table('album');
 		
     }

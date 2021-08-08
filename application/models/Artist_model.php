@@ -13,10 +13,10 @@ Class Artist_model extends CI_Model{
  
  function list($id){	
     if($id == 0){
-		$sql = "select codigo,name from artist";
+		$sql = "select id,name from artist";
 		$query = $this->db->query($sql, array());
 	}else{
-		$sql = "select codigo,name from artist where codigo = ?";
+		$sql = "select id,name from artist where id = ?";
 		$query = $this->db->query($sql, array($id));
 	}
     
@@ -27,7 +27,7 @@ Class Artist_model extends CI_Model{
  
   function excluir($id){
 
-	$this->db->where('codigo', $id);
+	$this->db->where('id', $id);
 	$this->db->delete('artist'); 
 	//print_r($this->db->last_query());exit;
 	return true;
@@ -36,7 +36,7 @@ Class Artist_model extends CI_Model{
 		
  function atualizar($dados,$id){
 
-	$this->db->where('codigo', $id);
+	$this->db->where('id', $id);
 	$this->db->update('artist', $dados); 
 	//print_r($this->db->last_query());exit;
 	return true;
